@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Exercicio 4";
+}
+<html>
+<head>
+    <title>Exercicio 4</title>
+</head>
+
+<body>
+    <h1>Tela de Usuários</h1>
+    <fieldset>
+        <legend>Filtro</legend>
+        <label for="codigo">Código</label> <input type="text" id="codigo" />
+        <label for="sexo">Sexo</label>
+        <select id="sexo">
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+        </select>
+        <input type="button" value="Filtrar" />
+    </fieldset>
+</body>
+</html>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/loaded")
+    @Scripts.Render("~/bundles/jqueryval")
+}

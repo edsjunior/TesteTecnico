@@ -1,0 +1,17 @@
+﻿body {
+    background-color: #a1efa5;
+    font-size: 20px;
+}
+
+label {
+    color: #ff0000;
+}
+
+.btn, .btn:hover {
+    color: #0026ff;
+    font-weight: bold;
+}
+#sexo{
+    height:34px!important;
+    border:none;
+}

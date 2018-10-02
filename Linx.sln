@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linx", "Linx\Linx.csproj", "{8C220C26-DA77-46B5-B3C7-A69EEBBEB54E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEletronico", "CaixaEletronico\CaixaEletronico.csproj", "{9F5876E7-BBF9-4679-901B-98B225C5C5C8}"
+EndProject
+Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C220C26-DA77-46B5-B3C7-A69EEBBEB54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C220C26-DA77-46B5-B3C7-A69EEBBEB54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C220C26-DA77-46B5-B3C7-A69EEBBEB54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C220C26-DA77-46B5-B3C7-A69EEBBEB54E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5876E7-BBF9-4679-901B-98B225C5C5C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5876E7-BBF9-4679-901B-98B225C5C5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5876E7-BBF9-4679-901B-98B225C5C5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5876E7-BBF9-4679-901B-98B225C5C5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23356CE1-739B-4234-A581-1CEB24CBF9F6}
+	EndGlobalSection
+EndGlobal

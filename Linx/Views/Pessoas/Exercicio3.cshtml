@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Linx.Models.Pessoa>
+
+@{
+    ViewBag.Title = "Exercicio 3";
+}
+
+<h2>Exercicio 3</h2>
+<p>Utilizando-se do Entity Framework, escreva uma consulta com expressão LAMBDA que retorne os 5 primeiros registros</p>
+<br />
+@Html.ActionLink("Listar 5 primeiros registros", "Exercicio3", new { id = 5 }) |
+@Html.ActionLink("Listar todos", "Exercicio3", new { id = "" });
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Código")
+        </th>
+        <th>
+            @Html.DisplayName("Nome")
+        </th>
+        <th>
+            @Html.DisplayName("Profissão")
+        </th>
+        <th>@Html.DisplayName("Ação")</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod_Pessoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom_Pessoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom_Profissao)
+            </td>
+            <td>
+                @Html.ActionLink("Alterar", "Exercicio2", new { id = item.Cod_Pessoa }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Cod_Pessoa })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Voltar", "Exercicio1")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/loaded")
+    @Scripts.Render("~/bundles/jqueryval")
+}

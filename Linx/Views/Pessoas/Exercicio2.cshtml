@@ -1,0 +1,57 @@
+﻿@model Linx.Models.Pessoa
+
+@{
+    ViewBag.Title = "Exercicio 2";
+}
+
+<h2>Exercicio 2</h2>
+<p>Definir um padrão de cores para o site:</p>
+<ul>
+    <li>Fundo de tela Verde;</li>
+    <li>letras de label em vermelho;</li>
+    <li>letras dos botões em azul;</li>
+    <li>todas as letras com tamanho de 20px</li>
+</ul>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Cod_Pessoa)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nom_Pessoa, "Digite seu Nome", htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
+                @Html.EditorFor(model => model.Nom_Pessoa, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nom_Pessoa, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nom_Profissao, "Selecione uma profissão", htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
+                @Html.DropDownListFor(model => model.Nom_Profissao, new SelectList(Enum.GetValues(typeof(Profissao))), "Selecione", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Nom_Profissao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-5 col-md-7">
+                <input type="submit" value="OK" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Exercicio3")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/loaded")
+    @Scripts.Render("~/bundles/jqueryval")
+}

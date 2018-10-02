@@ -1,0 +1,46 @@
+﻿@model Linx.Models.Pessoa
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Delete</h2>
+
+<h3>Deseja realmente apagar?</h3>
+<div>
+    <h4>pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom_Pessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom_Pessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom_Profissao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom_Profissao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Exercicio3")
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/loaded")
+    @Scripts.Render("~/bundles/jqueryval")
+}
